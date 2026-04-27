@@ -15,7 +15,7 @@ Move all Data Classes (Models) and the API Service interface (Retrofit/Ktor clie
 Move the `Repository` class and the entire local caching logic (Favorites and Offline 50-item cache) to the `:core` module. The `core` module must now handle all data fetching and persistence autonomously.
 
 **Step 4: Update the XML Application (`:app-xml`)**
-Add the `:core` module as a dependency in the `:app-xml` module's `build.gradle`. Clean up the `:app-xml` module by fixing all the broken imports in the `ViewModel`, `MainActivity`, and `Adapters` so they correctly point to the new packages inside the `:core` module. 
+Add the `:core` module as a dependency in the `:app-xml` module's `build.gradle`. Clean up the `:app-xml` module by fixing all the broken imports in the `ViewModel`, `MainActivity`, and `Adapters` so they correctly point to the new packages inside the `:core` module.
 
 **Step 5: Verify the Build**
 Compile the project to ensure there are no missing dependencies and that the `:app-xml` application runs exactly as it did before, but now powered by the `:core` module.

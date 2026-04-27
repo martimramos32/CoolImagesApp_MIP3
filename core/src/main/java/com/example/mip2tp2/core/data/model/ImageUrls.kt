@@ -1,4 +1,4 @@
-package com.example.mip2tp2.data.model
+package com.example.mip2tp2.core.data.model
 
 import com.google.gson.annotations.SerializedName
 

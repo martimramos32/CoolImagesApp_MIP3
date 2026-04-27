@@ -1,4 +1,4 @@
-package com.example.mip2tp2.data.api
+package com.example.mip2tp2.core.data.api
 
 import okhttp3.OkHttpClient
 import okhttp3.logging.HttpLoggingInterceptor
