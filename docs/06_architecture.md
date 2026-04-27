@@ -26,3 +26,32 @@ The application has transitioned from a monolithic structure to a multi-module a
 * [cite_start]**Technology:** Uses Jetpack Compose (Declarative UI) to draw the screens.
 * [cite_start]**Dependency:** Consumes the exact same `:core` module as the XML app.
 * [cite_start]**Exclusive Features:** Includes modern UI features (e.g., dynamic theming, animations, adaptive layouts) not present in the XML version to demonstrate Compose's capabilities.
+
+## 4. Module Dependency Diagram
+
+```text
++---------------------------------------------------+
+|                                                   |
+|             Cool Jetpack Weather App              |
+|                                                   |
++---------------------------------------------------+
+|                                                   |
+|  +-----------------+         +-----------------+  |
+|  |                 |         |                 |  |
+|  |  :app-compose   |         |    :app-xml     |  |
+|  |  (Modern UI)    |         |  (Legacy UI)    |  |
+|  |                 |         |                 |  |
+|  +--------+--------+         +--------+--------+  |
+|           |                           |           |
+|           |      Consumes (Depends on)|           |
+|           v                           v           |
+|  +---------------------------------------------+  |
+|  |                                             |  |
+|  |                  :core                      |  |
+|  |              (Shared Module)                |  |
+|  |                                             |  |
+|  |  [ Data Models | API Client | Repository ]  |  |
+|  |                                             |  |
+|  +---------------------------------------------+  |
+|                                                   |
++---------------------------------------------------+
