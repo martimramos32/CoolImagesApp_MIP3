@@ -59,6 +59,9 @@ dependencies {
     
     // Palette for dynamic colors
     implementation("androidx.palette:palette-ktx:1.0.0")
+    
+    // Material Icons Extended for Dark/Light mode icons
+    implementation("androidx.compose.material:material-icons-extended")
 
     // Tooling & Testing
     debugImplementation("androidx.compose.ui:ui-tooling")

@@ -10,6 +10,7 @@ import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.StateFlow
 import kotlinx.coroutines.flow.asStateFlow
 import kotlinx.coroutines.launch
+import android.content.Context
 
 sealed class GalleryUiState {
     object Loading : GalleryUiState()
@@ -27,6 +28,11 @@ class GalleryViewModel(application: Application) : AndroidViewModel(application)
 
     private val _favoritesState = MutableStateFlow<List<UnsplashImage>>(emptyList())
     val favoritesState: StateFlow<List<UnsplashImage>> = _favoritesState.asStateFlow()
+
+    private val prefs = application.getSharedPreferences("app_prefs", Context.MODE_PRIVATE)
+
+    private val _isDarkMode = MutableStateFlow(prefs.getBoolean("is_dark_mode", false))
+    val isDarkMode: StateFlow<Boolean> = _isDarkMode.asStateFlow()
 
     init {
         loadImages(isInitial = true)
@@ -54,5 +60,11 @@ class GalleryViewModel(application: Application) : AndroidViewModel(application)
     fun toggleFavorite(image: UnsplashImage) {
         val result = favoritesManager.toggleFavorite(image)
         loadFavorites() // Refresh the list
+    }
+
+    fun toggleDarkMode() {
+        val newValue = !_isDarkMode.value
+        _isDarkMode.value = newValue
+        prefs.edit().putBoolean("is_dark_mode", newValue).apply()
     }
 }

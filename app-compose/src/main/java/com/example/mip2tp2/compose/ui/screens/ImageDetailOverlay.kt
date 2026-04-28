@@ -100,7 +100,7 @@ fun ImageDetailOverlay(
                 IconButton(
                     onClick = onDismiss,
                     modifier = Modifier
-                        .padding(16.dp)
+                        .padding(top = 48.dp, end = 16.dp, bottom = 16.dp)
                         .align(Alignment.End)
                 ) {
                     Icon(
@@ -127,7 +127,7 @@ fun ImageDetailOverlay(
                 Column(
                     modifier = Modifier
                         .fillMaxWidth()
-                        .padding(24.dp)
+                        .padding(start = 24.dp, end = 24.dp, top = 24.dp, bottom = 72.dp)
                 ) {
                     Text(
                         text = image.user.name,
