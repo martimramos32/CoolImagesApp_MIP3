@@ -56,6 +56,9 @@ dependencies {
 
     // Coil for Compose
     implementation("io.coil-kt:coil-compose:2.7.0")
+    
+    // Palette for dynamic colors
+    implementation("androidx.palette:palette-ktx:1.0.0")
 
     // Tooling & Testing
     debugImplementation("androidx.compose.ui:ui-tooling")

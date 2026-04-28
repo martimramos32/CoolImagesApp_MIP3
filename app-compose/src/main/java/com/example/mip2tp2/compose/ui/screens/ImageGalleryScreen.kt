@@ -22,6 +22,9 @@ import androidx.compose.material3.pulltorefresh.PullToRefreshBox
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.collectAsState
 import androidx.compose.runtime.getValue
+import androidx.compose.runtime.mutableStateOf
+import androidx.compose.runtime.remember
+import androidx.compose.runtime.setValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.text.font.FontWeight
@@ -30,6 +33,7 @@ import androidx.lifecycle.viewmodel.compose.viewModel
 import com.example.mip2tp2.compose.ui.components.ImageCard
 import com.example.mip2tp2.compose.ui.viewmodel.GalleryUiState
 import com.example.mip2tp2.compose.ui.viewmodel.GalleryViewModel
+import com.example.mip2tp2.core.data.model.UnsplashImage
 
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
@@ -40,17 +44,20 @@ fun ImageGalleryScreen(
     val favorites by viewModel.favoritesState.collectAsState()
     val isRefreshing = uiState is GalleryUiState.Loading
 
-    Scaffold(
-        topBar = {
-            TopAppBar(
-                title = { Text("Unsplash Gallery") },
-                colors = TopAppBarDefaults.topAppBarColors(
-                    containerColor = MaterialTheme.colorScheme.primaryContainer,
-                    titleContentColor = MaterialTheme.colorScheme.onPrimaryContainer
+    var selectedImage by remember { mutableStateOf<UnsplashImage?>(null) }
+
+    Box(modifier = Modifier.fillMaxSize()) {
+        Scaffold(
+            topBar = {
+                TopAppBar(
+                    title = { Text("Unsplash Gallery") },
+                    colors = TopAppBarDefaults.topAppBarColors(
+                        containerColor = MaterialTheme.colorScheme.primaryContainer,
+                        titleContentColor = MaterialTheme.colorScheme.onPrimaryContainer
+                    )
                 )
-            )
-        }
-    ) { paddingValues ->
+            }
+        ) { paddingValues ->
         PullToRefreshBox(
             isRefreshing = isRefreshing,
             onRefresh = { viewModel.loadImages(isInitial = true) },
@@ -77,7 +84,7 @@ fun ImageGalleryScreen(
                                 image = image,
                                 isFavorite = true,
                                 onToggleFavorite = { viewModel.toggleFavorite(image) },
-                                onClick = { /* TODO: Detail Animation */ },
+                                onClick = { selectedImage = image },
                                 modifier = Modifier.width(140.dp)
                             )
                         }
@@ -108,13 +115,20 @@ fun ImageGalleryScreen(
                                     image = image,
                                     isFavorite = isFav,
                                     onToggleFavorite = { viewModel.toggleFavorite(image) },
-                                    onClick = { /* TODO: Detail Animation */ }
+                                    onClick = { selectedImage = image }
                                 )
                             }
                         }
                     }
                 }
             }
-        }
+            }
+        } // Close Scaffold
+        
+        // Detail Overlay
+        ImageDetailOverlay(
+            image = selectedImage,
+            onDismiss = { selectedImage = null }
+        )
     }
 }

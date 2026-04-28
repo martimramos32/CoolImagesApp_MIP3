@@ -84,3 +84,23 @@ Please generate the Compose code to integrate this UI."
 
 **Result:**
 O agente atualizou a interface com sucesso. Adicionou uma LazyRow no topo do ecrã principal para mostrar até 5 favoritos e colocou um botão de coração em cada fotografia. O ViewModel foi atualizado para processar estes eventos.
+
+## Prompt 7 (MIP-3)
+**Goal:**
+Funcionalidade Exclusiva do Compose (Animações e Cores Dinâmicas) - Implementar a expansão suave das imagens e a extração de cores da fotografia para alterar o tema da aplicação dinamicamente, cumprindo o requisito de inovação UI.
+
+**Prompt used:**
+"Execute Step 9 from docs/12_compose_app.md to implement the Compose-exclusive features in the :app-compose module.
+
+Please implement the following:
+
+Detail Animation: Update the ImageGalleryScreen and ImageCard so that when a user taps an image, it smoothly animates into a full-screen detailed view. Use AnimatedVisibility, animateContentSize, or Compose Shared Element Transitions. It should overlay the grid, not launch a new Activity.
+
+Dynamic Palette: Integrate the Android Palette API (androidx.palette:palette-ktx). Extract the dominant color from the selected image and use Compose's animateColorAsState to smoothly transition the background color of the full-screen view (or the app's main background) to match the image's vibe.
+
+Add the necessary Palette dependency to the app-compose module's build.gradle.kts if it's not already there.
+
+Please generate the code to bring this dynamic UI to life."
+
+**Result:**
+O agente implementou com sucesso a funcionalidade exclusiva. Adicionou a dependência da Palette API, criou uma transição suave para o modo de ecrã inteiro ao clicar numa foto, e o fundo da aplicação agora adapta-se dinamicamente às cores principais da imagem visualizada.
