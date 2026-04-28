@@ -42,3 +42,25 @@ Ligar o Módulo Legado e Verificação - Configurar a `app-xml` para consumir o 
 
 **Result:**
 A IA atualizou as dependências da app-xml e corrigiu os imports na MainActivity e no ViewModel. A compilação foi concluída com sucesso e a aplicação antiga voltou a funcionar com o novo motor.
+
+## Prompt 4 (MIP-3)
+**Goal:**
+Criação do Módulo Compose e Ligação ao Core - Inicializar a nova aplicação moderna com Jetpack Compose, configurando as dependências e o ViewModel que liga a UI ao repositório central.
+
+**Prompt used:**
+"Execute Step 6 and Step 7 from docs/12_compose_app.md.
+
+Create a new Android application module named app-compose.
+
+Configure its build.gradle.kts to enable Jetpack Compose, include the necessary Compose dependencies (Material 3, UI Tooling, ViewModel Compose, Coil/Glide for Compose), and add the :core module as a dependency.
+
+Update the root settings.gradle.kts to include :app-compose.
+
+Create MainActivity.kt with a basic Compose setContent block.
+
+Create a GalleryViewModel (or similar) that observes the Repository from the :core module and exposes a clean StateFlow representing the list of images and the loading state.
+
+Please generate the module structure, configurations, and initial code for these steps."
+
+**Result:**
+A IA criou o módulo app-compose com sucesso, ativou o Jetpack Compose no gradle e construiu o ViewModel que liga a nova interface moderna ao repositório do módulo :core.

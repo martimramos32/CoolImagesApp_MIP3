@@ -27,3 +27,4 @@ dependencyResolutionManagement {
 rootProject.name = "MIP2tp2"
 include(":app-xml")
 include(":core")
+include(":app-compose")
