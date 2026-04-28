@@ -8,6 +8,6 @@
 # Retrofit
 -keepattributes Signature
 -keepattributes *Annotation*
--keep class com.example.mip2tp2.data.model.** { *; }
+-keep class com.example.mip2tp2.core.data.model.** { *; }
 -dontwarn retrofit2.**
 -keep class retrofit2.** { *; }

@@ -12,7 +12,7 @@ import android.content.Intent
 import android.view.Menu
 import android.view.MenuItem
 import android.widget.Toast
-import com.example.mip2tp2.data.repository.FavoritesManager
+import com.example.mip2tp2.core.data.repository.FavoritesManager
 import com.example.mip2tp2.databinding.ActivityMainBinding
 import com.example.mip2tp2.ui.adapter.ImageAdapter
 import com.example.mip2tp2.ui.viewmodel.MainViewModel

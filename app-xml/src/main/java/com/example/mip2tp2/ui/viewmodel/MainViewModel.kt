@@ -5,9 +5,9 @@ import androidx.lifecycle.AndroidViewModel
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.viewModelScope
-import com.example.mip2tp2.data.model.UnsplashImage
-import com.example.mip2tp2.data.repository.FavoritesManager
-import com.example.mip2tp2.data.repository.ImageRepository
+import com.example.mip2tp2.core.data.model.UnsplashImage
+import com.example.mip2tp2.core.data.repository.FavoritesManager
+import com.example.mip2tp2.core.data.repository.ImageRepository
 import kotlinx.coroutines.launch
 
 /**

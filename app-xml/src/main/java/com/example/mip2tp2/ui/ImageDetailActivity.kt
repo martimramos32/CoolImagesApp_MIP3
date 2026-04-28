@@ -5,10 +5,10 @@ import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import com.bumptech.glide.Glide
 import com.example.mip2tp2.R
-import com.example.mip2tp2.data.model.ImageUrls
-import com.example.mip2tp2.data.model.UnsplashImage
-import com.example.mip2tp2.data.model.User
-import com.example.mip2tp2.data.repository.FavoritesManager
+import com.example.mip2tp2.core.data.model.ImageUrls
+import com.example.mip2tp2.core.data.model.UnsplashImage
+import com.example.mip2tp2.core.data.model.User
+import com.example.mip2tp2.core.data.repository.FavoritesManager
 import com.example.mip2tp2.databinding.ActivityImageDetailBinding
 
 class ImageDetailActivity : AppCompatActivity() {

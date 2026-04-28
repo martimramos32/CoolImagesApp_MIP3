@@ -6,7 +6,7 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.mip2tp2.databinding.ActivityFavoritesBinding
 import com.example.mip2tp2.ui.adapter.ImageAdapter
-import com.example.mip2tp2.data.repository.FavoritesManager
+import com.example.mip2tp2.core.data.repository.FavoritesManager
 
 class FavoritesActivity : AppCompatActivity() {
 

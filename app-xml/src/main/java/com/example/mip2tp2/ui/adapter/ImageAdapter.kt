@@ -5,11 +5,11 @@ import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
 import android.content.Intent
-import com.example.mip2tp2.data.model.UnsplashImage
+import com.example.mip2tp2.core.data.model.UnsplashImage
 import com.example.mip2tp2.databinding.ItemImageBinding
 import com.example.mip2tp2.ui.ImageDetailActivity
 import com.example.mip2tp2.R
-import com.example.mip2tp2.data.repository.FavoritesManager
+import com.example.mip2tp2.core.data.repository.FavoritesManager
 
 /**
  * Adapter for the RecyclerView to display a list of Unsplash images.

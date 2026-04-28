@@ -32,3 +32,13 @@ The logic for persisting the 50-item offline cache. The logic for saving and ret
 
 **Result:**
 A IA moveu com sucesso o Repository e a lógica da base de dados (Favoritos e Cache de 50 itens) para o módulo :core, garantindo que a gestão de dados fica independente da interface visual.
+
+## Prompt 3 (MIP-3)
+**Goal:**
+Ligar o Módulo Legado e Verificação - Configurar a `app-xml` para consumir o módulo `:core`, corrigir todos os imports partidos e garantir que a aplicação compila sem erros.
+
+**Prompt used:**
+"Execute Step 4 and Step 5 from docs/11_refactor_plan.md. Please generate the code and configuration changes for these steps"
+
+**Result:**
+A IA atualizou as dependências da app-xml e corrigiu os imports na MainActivity e no ViewModel. A compilação foi concluída com sucesso e a aplicação antiga voltou a funcionar com o novo motor.
