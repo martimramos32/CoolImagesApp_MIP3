@@ -64,3 +64,23 @@ Please generate the module structure, configurations, and initial code for these
 
 **Result:**
 A IA criou o módulo app-compose com sucesso, ativou o Jetpack Compose no gradle e construiu o ViewModel que liga a nova interface moderna ao repositório do módulo :core.
+
+## Prompt 6 (MIP-3)
+**Goal:**
+Integração Visual dos Favoritos no Compose - Desenhar a lista horizontal de favoritos no topo do ecrã e o botão de favoritar nos cartões, ligando a interface à lógica que já existia no módulo core.
+
+**Prompt used:**
+"Before we move to Step 9, we need to implement the UI for the Favorites feature in the :app-compose module. The core logic and database are already in the :core module.
+
+Please do the following updates:
+
+Update the ImageCard composable to include a 'Favorite' icon button (e.g., a heart) that toggles the favorite status of the image.
+
+Update the ImageGalleryScreen to include a horizontally scrollable row (LazyRow) at the very top of the screen. This row should display the user's current favorite images (maximum 5).
+
+Update the GalleryViewModel to expose a StateFlow of the favorite images from the :core Repository, and handle the add/remove favorite user events.
+
+Please generate the Compose code to integrate this UI."
+
+**Result:**
+O agente atualizou a interface com sucesso. Adicionou uma LazyRow no topo do ecrã principal para mostrar até 5 favoritos e colocou um botão de coração em cada fotografia. O ViewModel foi atualizado para processar estes eventos.
