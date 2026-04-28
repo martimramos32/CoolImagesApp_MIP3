@@ -17,7 +17,7 @@ android {
     compileSdk = 35
 
     defaultConfig {
-        applicationId = "com.example.mip2tp2"
+        applicationId = "com.example.mip2tp3.coolimages.xml"
         minSdk = 26
         targetSdk = 35
         versionCode = 1
