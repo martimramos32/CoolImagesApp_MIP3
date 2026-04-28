@@ -1,8 +1,8 @@
-package com.example.mip2tp2.data.repository
+package com.example.mip2tp2.core.data.repository
 
-import com.example.mip2tp2.data.api.RetrofitClient
-import com.example.mip2tp2.data.api.UnsplashApiService
-import com.example.mip2tp2.data.model.UnsplashImage
+import com.example.mip2tp2.core.data.api.RetrofitClient
+import com.example.mip2tp2.core.data.api.UnsplashApiService
+import com.example.mip2tp2.core.data.model.UnsplashImage
 
 /**
  * Repository class that acts as the single source of truth for image data.

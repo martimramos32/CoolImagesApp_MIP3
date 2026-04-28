@@ -1,8 +1,8 @@
-package com.example.mip2tp2.data.repository
+package com.example.mip2tp2.core.data.repository
 
 import android.content.Context
 import android.content.SharedPreferences
-import com.example.mip2tp2.data.model.UnsplashImage
+import com.example.mip2tp2.core.data.model.UnsplashImage
 import com.google.gson.Gson
 import com.google.gson.reflect.TypeToken
 
